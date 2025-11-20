@@ -79,52 +79,6 @@ export default function EditarUser() {
     }));
   };
 
-  //   function handleChange(event: React.ChangeEvent<HTMLInputElement>) {
-  //     const { name, value } = event.target;
-  //     setFormData((prevData) => ({
-  //       ...prevData,
-  //       [name]: value,
-  //     }));
-  //   }
-
-  //   async function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
-  //     event.preventDefault();
-  //     setError(null);
-  //     setSuccess(null);
-  //     setIsSubmitting(true)
-  //     try {
-  //       const dataToSend = { ...formData };
-  //       const updateUserDTO: UserUpdateDTO = {
-  //         nome: dataToSend.nome,
-  //         cpf: dataToSend.cpf,
-  //         email: dataToSend.email,
-  //       };
-  //       await updateUser(Number(userId), updateUserDTO);
-  //       setSuccess("Usuário atualizado com sucesso!");
-  //       setTimeout(() => {
-  //         navigate("/");
-  //       }, 3000);
-  //     } catch (error: unknown) {
-  //       let msg = "Erro ao salvar Usuário. Tente novamente";
-  //       if (axios.isAxiosError(error) && error.response && error.response.data) {
-  //         if (
-  //           error.response.data.errors &&
-  //           Array.isArray(error.response.data.errors)
-  //         ) {
-  //           const errorMessages = error.response.data.errors
-  //             .map((e: any) => e.message)
-  //             .join(", ");
-  //           msg = `Dados inválidos: ${errorMessages}. Tente novamente.`;
-  //         } else {
-  //           msg = error.response.data.error || msg;
-  //         }
-  //       }
-  //       setError(msg);
-  //       setTimeout(() => setError(null), 4000);
-  //     } finally {
-  //       setIsSubmitting(false);
-  //     }
-  //   }
   const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     setError(null);
